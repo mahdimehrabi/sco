@@ -1,4 +1,4 @@
-module m1-article-service
+module scrapper
 
 go 1.21
 

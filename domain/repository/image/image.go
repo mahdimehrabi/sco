@@ -3,7 +3,7 @@ package image
 import (
 	"context"
 	"errors"
-	"m1-article-service/domain/entity"
+	"scrapper/domain/entity"
 )
 
 var (

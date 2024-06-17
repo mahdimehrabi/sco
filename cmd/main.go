@@ -1,6 +1,6 @@
 package main
 
-import "m1-article-service/application/command"
+import "scrapper/application/command"
 
 func main() {
 	command.Boot()

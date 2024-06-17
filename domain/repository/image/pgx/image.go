@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
-	"m1-article-service/domain/entity"
+	"scrapper/domain/entity"
 )
 
 const pageSize = 10

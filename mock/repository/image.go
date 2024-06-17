@@ -6,8 +6,8 @@ package mock_image
 
 import (
 	context "context"
-	"m1-article-service/domain/entity"
 	reflect "reflect"
+	"scrapper/domain/entity"
 
 	gomock "github.com/golang/mock/gomock"
 )
