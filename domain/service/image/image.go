@@ -3,10 +3,10 @@ package image
 import (
 	"context"
 	"errors"
-	"m1-article-service/domain/entity"
-	userRepo "m1-article-service/domain/repository/image"
-	loggerInfra "m1-article-service/infrastructure/log"
-	"m1-article-service/utils/image"
+	"scrapper/domain/entity"
+	imageRepo "scrapper/domain/repository/image"
+	logger "scrapper/infrastructure/log"
+	"scrapper/utils/image"
 	"time"
 )
 
@@ -16,13 +16,13 @@ const workerQueueLength = 20000
 var ErrServiceUnavailable = errors.New("service unavailable")
 
 type Service struct {
-	imageRepo        userRepo.Image
-	logger           loggerInfra.Logger
+	imageRepo        imageRepo.Image
+	logger           logger.Logger
 	createQueue      chan *entity.Image
 	storageDirectory string
 }
 
-func NewService(logger loggerInfra.Logger, imageRepo userRepo.Image, storageDirectory string) *Service {
+func NewService(logger logger.Logger, imageRepo imageRepo.Image, storageDirectory string) *Service {
 	s := &Service{
 		imageRepo:        imageRepo,
 		logger:           logger,
